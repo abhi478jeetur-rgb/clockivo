@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Clockivo — Premium Online Time Tools</title>
+  <meta name="description"
+    content="A comprehensive browser-based time utility suite featuring Alarm Clock, Countdown Timer, Stopwatch, and World Clock with a beautiful liquid-glass design.">
+  <meta name="keywords" content="alarm clock, online timer, stopwatch, world clock, time management">
+  <meta name="theme-color" content="#050508">
+  <link rel="canonical" href="https://clockivo.com">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ik.imagekit.io">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons & Branding -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Social Metadata (Open Graph) -->
+  <meta property="og:title" content="Clockivo - Premium Online Alarm, Timer & Stopwatch">
+  <meta property="og:description" content="The ultimate zero-friction time tool suite. Free online alarm clock, visual timer, and precision stopwatch.">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta property="og:url" content="https://clockivo.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Schema.org for Software Application (Google/Bing) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Clockivo Online Alarm & Timer",
+    "operatingSystem": "Web Browser",
+    "applicationCategory": "UtilitiesApplication",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "1250"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <!-- FAQ Schema for SEO Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "Is Clockivo free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Clockivo is a 100% free online time-tool suite including alarm clock, timer, stopwatch, and world clock."
+      }
+    }, {
+      "@type": "Question",
+      "name": "Does the online alarm work if the tab is closed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, you must keep the browser tab open for the alarm or timer to sound. However, your screen can be off as long as the computer is awake."
+      }
+    }]
+  }
+  </script>
+  <!-- Floating Social Share -->
+  <div class="share-container">
+    <button class="share-trigger liquid-glass" aria-label="Share Clockivo">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+    </button>
+    <div class="share-menu liquid-glass">
+      <a href="https://twitter.com/intent/tweet?text=Clockivo is the ultimate zero-friction online alarm, timer, and stopwatch suite. Check it out!&url=https://clockivo.com" target="_blank" class="share-item" title="Share on X">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="https://www.reddit.com/submit?url=https://clockivo.com&title=Clockivo - Premium Online Alarm, Timer & Stopwatch Suite" target="_blank" class="share-item" title="Share on Reddit">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.051l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.057 1.597.047.222.069.447.069.675 0 2.212-2.529 4.003-5.648 4.003-3.12 0-5.65-1.791-5.65-4.003 0-.228.022-.453.069-.675a1.75 1.75 0 0 1-1.057-1.597c0-.968.786-1.754 1.754-1.754.463 0 .89.182 1.207.491 1.207-.856 2.878-1.418 4.699-1.488l.887-4.148 3.22.676c.002-.007.006-.014.008-.021z"/></svg>
+      </a>
+      <button class="share-item" onclick="navigator.clipboard.writeText('Clockivo - Premium Online Alarm & Timer: https://clockivo.com'); alert('Link copied for sharing on Quora, YouTube or anywhere!')" title="Copy Link for YouTube/Quora">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+
+  <header class="app-header">
+    <a href="#home" class="logo-circle liquid-glass" aria-label="Home">
+      <img src="assets/logo.png" alt="Clockivo Logo" style="width: 24px; height: 24px; object-fit: contain;" fetchpriority="high">
+    </a>
+    <nav class="main-nav liquid-glass">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#alarm" class="nav-link">Alarm</a>
+      <a href="#timer" class="nav-link">Timer</a>
+      <a href="#stopwatch" class="nav-link">Stopwatch</a>
+      <a href="#world-clock" class="nav-link">World Clock</a>
+      <a href="#settings" class="nav-link">Settings</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <button id="theme-toggle" class="nav-theme-btn" aria-label="Toggle theme">
+        <svg id="ti-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+        <svg id="ti-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          style="display:none">
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+      </button>
+    </nav>
+    <button id="mob-btn" class="logo-circle liquid-glass mob-only" aria-label="Menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+    <div id="mob-drawer" class="mob-drawer" aria-hidden="true">
+      <button id="mob-close" class="mob-close">✕</button>
+      <a href="#home" class="mob-link">Home</a><a href="#alarm" class="mob-link">Alarm</a>
+      <a href="#timer" class="mob-link">Timer</a><a href="#stopwatch" class="mob-link">Stopwatch</a>
+      <a href="#clock" class="mob-link">Clock</a><a href="#world-clock" class="mob-link">World Clock</a>
+      <a href="#settings" class="mob-link">Settings</a>
+      <a href="#faq" class="mob-link">FAQ</a>
+      <a href="blog.html" class="mob-link">Blog</a>
+    </div>
+  </header>
+
+  <main id="app">
+
+    <!-- HOME -->
+    <section id="home" class="view-section active">
+      <div class="hero">
+        <video class="hero-video v-dark" autoplay muted loop playsinline preload="metadata">
+          <source src="https://ik.imagekit.io/a57jpcchpv/hubber%20web/clock.com/night_video-ezgif.com-gif-maker.mp4"
+            type="video/mp4">
+        </video>
+        <video class="hero-video v-light" autoplay muted loop playsinline preload="metadata">
+          <source src="https://ik.imagekit.io/a57jpcchpv/hubber%20web/clock.com/day_video-gif-maker.mp4"
+            type="video/mp4">
+        </video>
+        <div class="hero-badge liquid-glass anim" style="--d:.3s">
+          <span class="chip">Live</span><span class="badge-txt">Your browser-based time companion</span>
+        </div>
+        <h1 class="hero-time anim" id="hero-time" style="--d:.5s">00:00:00</h1>
+        <p class="hero-date anim" id="hero-date" style="--d:.65s">Loading…</p>
+        <p class="tagline anim" style="--d:.75s">Expert-grade <a href="heavy-sleepers.html" style="color:var(--accent);">online alarm clock</a> and <a href="aesthetic-pomodoro-timer.html" style="color:var(--accent);">productivity timers</a> to help you manage time, beautifully.</p>
+        <div class="hero-ctas anim" style="--d:.9s">
+          <a href="#alarm" class="btn-primary liquid-glass-strong">Set Alarm <svg width="16" height="16"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg></a>
+          <a href="#clock" class="btn-sec">View Clock <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg></a>
+        </div>
+        <div class="stats-row anim" style="--d:1.1s">
+          <div class="stat-card liquid-glass">
+            <div class="stat-n" id="stat-alarms">0</div>
+            <div class="stat-l">Active Alarms</div>
+          </div>
+          <div class="stat-card liquid-glass">
+            <div class="stat-n">5+</div>
+            <div class="stat-l">Time Zones</div>
+          </div>
+        </div>
+      </div>
+      <div class="tools-wrap anim" style="--d:1.2s">
+        <p class="kicker">// Tools</p>
+        <h2 class="sh">Everything<br>in one place</h2>
+        <div class="card-grid">
+          <a href="#alarm" class="tool-card liquid-glass">
+            <div class="tc-top">
+              <div class="t-icon liquid-glass"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                  <path d="M5 3L2 6M22 6l-3-3" />
+                </svg></div>
+              <div class="tc-tags"><span class="tag liquid-glass">Multi-Alarm</span><span
+                  class="tag liquid-glass">Repeating</span><span class="tag liquid-glass">Snooze</span></div>
+            </div>
+            <div class="tc-bot">
+              <h3>Alarm Clock</h3>
+              <p>Reliable online alarm clock with custom sounds, repeating options, and snooze functionality.</p>
+            </div>
+          </a>
+          <a href="#timer" class="tool-card liquid-glass">
+            <div class="tc-top">
+              <div class="t-icon liquid-glass"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="8" x2="12" y2="12" />
+                  <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg></div>
+              <div class="tc-tags"><span class="tag liquid-glass">Presets</span><span
+                  class="tag liquid-glass">Progress</span><span class="tag liquid-glass">Alert</span></div>
+            </div>
+            <div class="tc-bot">
+              <h3>Visual Timer</h3>
+              <p>High-performance countdown timer for study, deep work, and productivity sessions.</p>
+            </div>
+          </a>
+          <a href="#stopwatch" class="tool-card liquid-glass">
+            <div class="tc-top">
+              <div class="t-icon liquid-glass"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12" />
+                  <path d="M8 2h8" />
+                </svg></div>
+              <div class="tc-tags"><span class="tag liquid-glass">Milliseconds</span><span
+                  class="tag liquid-glass">Laps</span><span class="tag liquid-glass">Export</span></div>
+            </div>
+            <div class="tc-bot">
+              <h3>Stopwatch</h3>
+              <p>High-precision lap tracking with milliseconds, fastest/slowest highlights, and CSV export.</p>
+            </div>
+          </a>
+          <a href="#world-clock" class="tool-card liquid-glass">
+            <div class="tc-top">
+              <div class="t-icon liquid-glass"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <path
+                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg></div>
+              <div class="tc-tags"><span class="tag liquid-glass">Multi-City</span><span
+                  class="tag liquid-glass">GMT</span><span class="tag liquid-glass">Day/Night</span></div>
+            </div>
+            <div class="tc-bot">
+              <h3>World Clock</h3>
+              <p>Track time across major global cities like New York, London, Tokyo, and Dubai.</p>
+            </div>
+          </a>
+          <a href="#clock" class="tool-card liquid-glass">
+            <div class="tc-top">
+              <div class="t-icon liquid-glass"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg></div>
+              <div class="tc-tags"><span class="tag liquid-glass">Full Screen</span><span
+                  class="tag liquid-glass">Digital</span><span class="tag liquid-glass">Live</span></div>
+            </div>
+            <div class="tc-bot">
+              <h3>Online Clock</h3>
+              <p>A beautiful full-screen digital clock with live date and immersive theme options.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALARM -->
+    <section id="alarm" class="view-section">
+      <div class="tool-header">
+        <h2 class="sh">Clockivo Online Alarm Clock</h2>
+        <p class="tagline">The most reliable wake-up tool for your browser. Perfect for <a href="sleep-hygiene.html" style="color:var(--accent);">optimizing your sleep hygiene</a>.</p>
+      </div>
+      <div class="alarm-layout">
+        <div class="alarm-form liquid-glass">
+          <h3 class="panel-title">New Alarm</h3>
+          <div class="time-row">
+            <input type="number" id="a-hour" min="1" max="12" value="7" class="t-field liquid-glass" aria-label="Hour">
+            <span class="t-sep">:</span>
+            <input type="number" id="a-min" min="0" max="59" value="0" class="t-field liquid-glass" aria-label="Minute">
+            <div class="ampm-wrap" id="ampm">
+              <button class="ampm-btn active" data-v="AM">AM</button>
+              <button class="ampm-btn" data-v="PM">PM</button>
+            </div>
+          </div>
+          <div class="fg"><label>Label</label><input type="text" id="a-label" placeholder="Morning alarm"
+              class="fi liquid-glass"></div>
+          <div class="fg"><label>Sound</label>
+            <div class="sound-row">
+              <select id="a-sound" class="fi liquid-glass">
+                <option value="assets/sound/mixkit-alarm-tone-996.wav">Alarm Tone</option>
+                <option value="assets/sound/mixkit-alert-alarm-1005.wav">Alert Alarm</option>
+                <option value="assets/sound/mixkit-classic-alarm-995.wav">Classic Alarm</option>
+                <option value="assets/sound/mixkit-digital-clock-digital-alarm-buzzer-992.wav">Digital Buzzer</option>
+                <option value="assets/sound/mixkit-facility-alarm-sound-999.wav">Facility Alarm</option>
+                <option value="assets/sound/mixkit-rooster-crowing-in-the-morning-2462.wav">Rooster Crow</option>
+                <option value="assets/sound/mixkit-slot-machine-payout-alarm-1996.wav">Slot Machine Alarm</option>
+                <option value="assets/sound/mixkit-street-public-alarm-997.wav">Street Alarm</option>
+              </select>
+              <button id="test-sound" class="btn-ghost liquid-glass">▶ Test</button>
+            </div>
+            <input type="range" id="a-vol" min="0" max="1" step="0.05" value="0.7" class="vol-slider">
+          </div>
+          <div class="fg"><label>Repeat</label>
+            <div class="repeat-row" id="repeat-opts">
+              <button class="r-btn active" data-v="once">Once</button>
+              <button class="r-btn" data-v="daily">Daily</button>
+              <button class="r-btn" data-v="weekdays">Weekdays</button>
+              <button class="r-btn" data-v="weekends">Weekends</button>
+              <button class="r-btn" data-v="custom">Custom</button>
+            </div>
+            <div class="day-picker" id="day-picker">
+              <button class="day-btn" data-d="0">Su</button>
+              <button class="day-btn" data-d="1">Mo</button>
+              <button class="day-btn" data-d="2">Tu</button>
+              <button class="day-btn" data-d="3">We</button>
+              <button class="day-btn" data-d="4">Th</button>
+              <button class="day-btn" data-d="5">Fr</button>
+              <button class="day-btn" data-d="6">Sa</button>
+            </div>
+          </div>
+          <div class="fg"><label>Quick Set</label>
+            <div class="presets-grid">
+              <button class="preset liquid-glass" data-h="6" data-m="0" data-p="AM">6:00 AM</button>
+              <button class="preset liquid-glass" data-h="7" data-m="0" data-p="AM">7:00 AM</button>
+              <button class="preset liquid-glass" data-h="8" data-m="0" data-p="AM">8:00 AM</button>
+              <button class="preset liquid-glass" data-h="9" data-m="30" data-p="AM">9:30 AM</button>
+              <button class="preset liquid-glass" data-h="12" data-m="0" data-p="PM">12:00 PM</button>
+              <button class="preset liquid-glass" data-h="6" data-m="0" data-p="PM">6:00 PM</button>
+            </div>
+          </div>
+          <div class="fg"><label>Snooze Duration</label>
+            <div class="repeat-row">
+              <button class="r-btn active" data-snooze="5">5 min</button>
+              <button class="r-btn" data-snooze="10">10 min</button>
+              <button class="r-btn" data-snooze="15">15 min</button>
+            </div>
+          </div>
+          <button id="set-alarm-btn" class="btn-primary liquid-glass-strong full-w">Set Alarm <svg width="16"
+              height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg></button>
+        </div>
+        <div class="alarm-list-panel">
+          <div class="panel-hdr">
+            <h3 class="panel-title">Alarms</h3><span id="alarm-badge" class="badge liquid-glass">0</span>
+          </div>
+          <div id="alarm-list"></div>
+          <div id="alarm-empty" class="empty-st"><span>⏰</span>
+            <p>No alarms yet. Create one →</p>
+          </div>
+          <div class="alarm-video-box liquid-glass">
+            <img src="https://ik.imagekit.io/a57jpcchpv/hubber%20web/clock.com/Astronaut_sleeping_on_202604261025-ezgif.com-optijpeg.jpg" alt="Sleeping Astronaut" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMER -->
+    <section id="timer" class="view-section">
+      <div class="tool-header">
+        <h2 class="sh">Clockivo Online Timer</h2>
+        <p class="tagline">An <a href="aesthetic-pomodoro-timer.html" style="color:var(--accent);">aesthetic focus timer</a> for classrooms, fitness, and professional productivity.</p>
+      </div>
+      <div class="timer-layout">
+        <div class="timer-main-content">
+          <div class="timer-ring-wrap liquid-glass">
+            <svg class="t-ring-svg" viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="88" class="ring-bg" />
+              <circle cx="100" cy="100" r="88" class="ring-fg" id="timer-ring-fg" stroke-dasharray="553"
+                stroke-dashoffset="0" />
+            </svg>
+            <div class="t-ring-inner">
+              <div class="t-ring-time" id="timer-disp">00:00:00</div>
+              <div class="t-ring-end" id="timer-end"></div>
+              <div class="t-ring-lbl" id="timer-lbl-disp"></div>
+            </div>
+          </div>
+          <div class="timer-controls">
+            <div class="presets-grid">
+              <button class="preset liquid-glass" data-s="60">1m</button>
+              <button class="preset liquid-glass" data-s="300">5m</button>
+              <button class="preset liquid-glass" data-s="600">10m</button>
+              <button class="preset liquid-glass" data-s="900">15m</button>
+              <button class="preset liquid-glass" data-s="1500">25m</button>
+              <button class="preset liquid-glass" data-s="1800">30m</button>
+              <button class="preset liquid-glass" data-s="2700">45m</button>
+              <button class="preset liquid-glass" data-s="3600">1h</button>
+            </div>
+            <div class="timer-custom liquid-glass">
+              <input type="number" id="t-h" min="0" max="23" value="0" placeholder="00" aria-label="Hours"><span>h</span>
+              <input type="number" id="t-m" min="0" max="59" value="5" placeholder="00"
+                aria-label="Minutes"><span>m</span>
+              <input type="number" id="t-s" min="0" max="59" value="0" placeholder="00"
+                aria-label="Seconds"><span>s</span>
+            </div>
+            <input type="text" id="t-label" placeholder="Timer label (optional)" class="fi liquid-glass">
+            <div class="btn-row">
+              <button id="t-start" class="btn-primary liquid-glass-strong">Start</button>
+              <button id="t-pause" class="btn-ghost liquid-glass" disabled>Pause</button>
+              <button id="t-reset" class="btn-ghost liquid-glass">Reset</button>
+            </div>
+          </div>
+        </div>
+        <div class="timer-visual-box liquid-glass">
+          <img src="https://ik.imagekit.io/a57jpcchpv/hubber%20web/clock.com/Astronaut_night%20timer-optijpeg.jpg" alt="Timer Visual" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- STOPWATCH -->
+    <section id="stopwatch" class="view-section">
+      <div class="mod-hdr">
+        <p class="kicker">// Stopwatch</p>
+        <h2 class="sh">Measure<br>every moment</h2>
+      </div>
+      <div class="sw-layout">
+        <div class="sw-main-content">
+          <div class="sw-disp liquid-glass">
+            <div class="sw-time" id="sw-time">00:00:00<span class="sw-ms">.000</span></div>
+          </div>
+          <div class="btn-row">
+            <button id="sw-start" class="btn-primary liquid-glass-strong">Start</button>
+            <button id="sw-lap" class="btn-ghost liquid-glass" disabled>Lap</button>
+            <button id="sw-reset" class="btn-ghost liquid-glass">Reset</button>
+          </div>
+          <div id="sw-laps-panel" class="sw-laps-panel" style="display:none">
+            <div class="panel-hdr">
+              <span class="panel-title">Laps</span>
+              <div class="panel-acts">
+                <button id="sw-export" class="btn-ghost liquid-glass">Export CSV</button>
+                <button id="sw-clear-laps" class="btn-ghost liquid-glass">Clear</button>
+              </div>
+            </div>
+            <div id="sw-laps"></div>
+          </div>
+        </div>
+        <div class="sw-visual-box liquid-glass">
+          <img src="https://ik.imagekit.io/a57jpcchpv/hubber%20web/clock.com/Astronaut%20day%20timer.jpg" alt="Stopwatch Visual" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOCK -->
+    <section id="clock" class="view-section">
+      <div class="clock-wrap">
+        <button id="fs-btn" class="btn-ghost liquid-glass fs-btn" aria-label="Fullscreen">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
+          </svg> Fullscreen
+        </button>
+        <p class="kicker">// Digital Clock</p>
+        <div class="clk-main" id="clk-time">00:00:00</div>
+        <p class="clk-date" id="clk-date">Loading…</p>
+        <div class="clk-controls">
+          <label class="tog liquid-glass"><input type="checkbox" id="fmt24"><span class="tog-track"><span
+                class="tog-thumb"></span></span>24-Hour</label>
+          <label class="tog liquid-glass"><input type="checkbox" id="show-sec" checked><span class="tog-track"><span
+                class="tog-thumb"></span></span>Seconds</label>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- WORLD CLOCK -->
+    <section id="world-clock" class="view-section">
+      <div class="tool-header">
+        <h2 class="sh">Clockivo World Clock</h2>
+        <p class="tagline">The essential <a href="time-zone-management.html" style="color:var(--accent);">world clock for remote teams</a> to manage global time zones easily.</p>
+      </div>
+      <div class="wc-layout">
+        <div class="wc-search-wrap liquid-glass">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input type="text" id="wc-search" placeholder="Search city or timezone…" autocomplete="off">
+          <div id="wc-suggestions" class="wc-sugg"></div>
+        </div>
+        <div id="wc-grid" class="wc-grid"></div>
+      </div>
+    </section>
+
+    <!-- CITY VIEW -->
+    <section id="city-view" class="view-section">
+      <div class="mod-hdr">
+        <button class="btn-ghost liquid-glass back-btn" onclick="switchView('world-clock')">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            style="margin-right:8px;">
+            <line x1="19" y1="12" x2="5" y2="12" />
+            <polyline points="12 19 5 12 12 5" />
+          </svg>
+          Back
+        </button>
+      </div>
+      <div class="cv-layout">
+        <div class="cv-card liquid-glass">
+          <p id="cv-loc" class="kicker">// City Name</p>
+          <h1 id="cv-time" class="cv-time">00:00:00</h1>
+          <p id="cv-date" class="cv-date">Date</p>
+          <div id="cv-info" class="cv-info-grid">
+            <div class="cv-info-item"><span>Timezone</span>
+              <p id="cv-tz">-</p>
+            </div>
+            <div class="cv-info-item"><span>Offset</span>
+              <p id="cv-off">-</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section id="settings" class="view-section">
+        <div class="settings-group liquid-glass">
+          <h3 class="sg-title">Alarm Defaults</h3>
+          <div class="sr"><span>Default Sound</span><select id="s-sound" class="fi liquid-glass">
+              <option value="assets/sound/mixkit-alarm-tone-996.wav">Alarm Tone</option>
+              <option value="assets/sound/mixkit-alert-alarm-1005.wav">Alert Alarm</option>
+              <option value="assets/sound/mixkit-classic-alarm-995.wav">Classic Alarm</option>
+              <option value="assets/sound/mixkit-digital-clock-digital-alarm-buzzer-992.wav">Digital Buzzer</option>
+              <option value="assets/sound/mixkit-facility-alarm-sound-999.wav">Facility Alarm</option>
+              <option value="assets/sound/mixkit-rooster-crowing-in-the-morning-2462.wav">Rooster Crow</option>
+              <option value="assets/sound/mixkit-slot-machine-payout-alarm-1996.wav">Slot Machine Alarm</option>
+              <option value="assets/sound/mixkit-street-public-alarm-997.wav">Street Alarm</option>
+            </select></div>
+          <div class="sr"><span>Default Snooze</span>
+            <div class="seg-ctrl"><button class="seg active" data-snooze="5">5m</button><button class="seg"
+                data-snooze="10">10m</button><button class="seg" data-snooze="15">15m</button></div>
+          </div>
+        </div>
+        <div class="settings-group liquid-glass">
+          <h3 class="sg-title">Notifications</h3>
+          <div class="sr"><span>Browser Notifications</span><button id="notif-btn"
+              class="btn-ghost liquid-glass">Request Permission</button></div>
+          <p id="notif-status" class="sg-note"></p>
+        </div>
+        <div class="settings-group liquid-glass">
+          <h3 class="sg-title">Data</h3>
+          <div class="sr"><span>Clear all data</span><button id="clear-data-btn"
+              class="btn-ghost liquid-glass danger">Clear All</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="view-section">
+      <div class="container">
+        <div class="mod-hdr">
+          <p class="kicker">// Help</p>
+          <h2 class="sh">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-layout">
+          <div class="faq-item liquid-glass">
+            <div class="faq-q">
+              <span>What is Clockivo?</span>
+              <i class="ti ti-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+              <p>Clockivo is a premium, browser-based time utility suite designed with a liquid-glass aesthetic. It combines Alarms, Timers, Stopwatch, and World Clock in one sleek interface.</p>
+            </div>
+          </div>
+
+          <div class="faq-item liquid-glass">
+            <div class="faq-q">
+              <span>Will the alarm ring if I close the tab?</span>
+              <i class="ti ti-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+              <p>No. Due to browser security limitations, the website must be open in a tab to trigger alarms. However, it can run perfectly in the background or on a minimized window.</p>
+            </div>
+          </div>
+
+          <div class="faq-item liquid-glass">
+            <div class="faq-q">
+              <span>Is my data private and secure?</span>
+              <i class="ti ti-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+              <p>Yes. All your alarms, settings, and world clocks are stored locally on your device using browser Storage. No data is ever sent to any server.</p>
+            </div>
+          </div>
+
+          <div class="faq-item liquid-glass">
+            <div class="faq-q">
+              <span>How do I export my Stopwatch laps?</span>
+              <i class="ti ti-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+              <p>In the Stopwatch section, once you have recorded laps, a "Export CSV" button will appear in the Laps panel. Click it to download your data in a spreadsheet-friendly format.</p>
+            </div>
+          </div>
+
+          <div class="faq-item liquid-glass">
+            <div class="faq-q">
+              <span>Can I customize the theme?</span>
+              <i class="ti ti-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+              <p>Yes, you can switch between Light and Dark modes in the Settings section. The "Auto" mode follows your system's preferences automatically.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="view-section">
+      <div class="mod-hdr">
+        <p class="kicker">// About</p>
+        <h2 class="sh">About<br>Clockivo</h2>
+      </div>
+      <div class="content-card liquid-glass">
+        <p style="text-align: left; line-height: 1.6; color: var(--text-muted); margin-bottom: 1rem;">Clockivo is a
+          premium, high-performance time utility suite designed to operate entirely within your browser. Without relying
+          on external servers, it ensures your alarms, timers, and stopwatches remain precise, private, and fast.</p>
+        <p style="text-align: left; line-height: 1.6; color: var(--text-muted);">Built with an elegant liquid-glass
+          aesthetic, Clockivo proves that utility tools can be both deeply functional and beautifully designed.</p>
+      </div>
+    </section>
+
+    <!-- 404 -->
+    <section id="not-found" class="view-section">
+      <div class="nf-layout">
+        <div class="nf-bg"
+          style="background-image: url('https://ik.imagekit.io/a57jpcchpv/hubber%20web/clock.com/404_written_in_202604261020-ezgif.com-optijpeg.jpg')">
+        </div>
+        <div class="nf-content anim">
+          <p class="nf-desc">Lost in time? The page you're looking for doesn't exist.</p>
+          <a href="#home" class="btn-primary liquid-glass-strong">Return Home</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIVACY POLICY -->
+    <section id="privacy" class="view-section">
+      <div class="mod-hdr">
+        <p class="kicker">// Privacy</p>
+        <h2 class="sh">Privacy<br>Policy</h2>
+      </div>
+      <div class="content-card liquid-glass" style="text-align: left;">
+        <h3
+          style="margin-bottom:1rem; font-family: var(--font-heading); font-size:1.5rem; font-style: italic; font-weight: 400;">
+          Your Data Stays Yours</h3>
+        <p style="line-height: 1.6; color: var(--text-muted); margin-bottom: 1rem;">At Clockivo, we value your privacy
+          above all else. Our application is designed as a zero-backend architecture. This means:</p>
+        <ul
+          style="list-style:disc; margin-left: 1.5rem; color: var(--text-muted); line-height: 1.6; margin-bottom:1rem;">
+          <li>We do not collect, store, or sell any personal data.</li>
+          <li>All your alarms, settings, and timers are saved locally on your device using your browser's localStorage.
+          </li>
+          <li>No analytical tracking or intrusive cookies are deployed.</li>
+        </ul>
+        <p style="line-height: 1.6; color: var(--text-muted);">For any inquiries regarding privacy, please contact us
+          directly.</p>
+      </div>
+    </section>
+
+    <!-- TERMS OF SERVICE -->
+    <section id="terms" class="view-section">
+      <div class="mod-hdr">
+        <p class="kicker">// Terms</p>
+        <h2 class="sh">Terms of<br>Service</h2>
+      </div>
+      <div class="content-card liquid-glass" style="text-align: left;">
+        <p style="line-height: 1.6; color: var(--text-muted); margin-bottom: 1rem;">By accessing and using Clockivo, you
+          accept and agree to be bound by the terms and provision of this agreement. Furthermore, when using this
+          application, you shall be subject to any posted guidelines or rules applicable to such services.</p>
+        <p style="line-height: 1.6; color: var(--text-muted); margin-bottom: 1rem;">Clockivo is provided "as is" without
+          warranty of any kind, either express or implied. We do not guarantee uninterrupted functionality, especially
+          if browser cache is cleared or device power is lost.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ALARM RINGING MODAL -->
+  <div id="alarm-modal" class="a-modal" aria-hidden="true" role="alertdialog">
+    <div class="a-modal-card liquid-glass-strong">
+      <button onclick="stopRingingAlarm()" class="mob-close" aria-label="Close"
+        style="position: absolute; top: 15px; right: 15px; background: transparent; border: none; color: var(--text-muted); font-size: 1.5rem; cursor: pointer;">✕</button>
+      <div class="a-ring-icon">🔔</div>
+      <h2 id="modal-label">Alarm</h2>
+      <p id="modal-time" class="modal-time">7:00 AM</p>
+
+      <div class="ring-settings" style="margin: 1.5rem 0; text-align: left;">
+        <div class="sound-row" style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+          <select id="modal-a-sound" class="fi liquid-glass" style="flex: 1;" onchange="changeRingSound(this.value)">
+            <option value="assets/sound/mixkit-alarm-tone-996.wav">Alarm Tone</option>
+            <option value="assets/sound/mixkit-alert-alarm-1005.wav">Alert Alarm</option>
+            <option value="assets/sound/mixkit-classic-alarm-995.wav">Classic Alarm</option>
+            <option value="assets/sound/mixkit-digital-clock-digital-alarm-buzzer-992.wav">Digital Buzzer</option>
+            <option value="assets/sound/mixkit-facility-alarm-sound-999.wav">Facility Alarm</option>
+            <option value="assets/sound/mixkit-rooster-crowing-in-the-morning-2462.wav">Rooster Crow</option>
+            <option value="assets/sound/mixkit-slot-machine-payout-alarm-1996.wav">Slot Machine Alarm</option>
+            <option value="assets/sound/mixkit-street-public-alarm-997.wav">Street Alarm</option>
+          </select>
+          <button id="modal-a-mute" class="btn-ghost liquid-glass" style="padding: 0 0.8rem;"
+            onclick="toggleRingMute()">🔊</button>
+        </div>
+        <input type="range" id="modal-a-vol" min="0" max="1" step="0.05" value="1.0" class="vol-slider"
+          style="width: 100%;" oninput="changeRingVol(this.value)">
+      </div>
+
+      <div class="modal-snooze">
+        <button class="snooze-btn liquid-glass" data-min="5">Snooze 5m</button>
+        <button class="snooze-btn liquid-glass" data-min="10">Snooze 10m</button>
+        <button class="snooze-btn liquid-glass" data-min="15">Snooze 15m</button>
+      </div>
+      <button id="stop-alarm-btn" class="btn-primary liquid-glass-strong full-w" onclick="stopRingingAlarm()">Stop
+        Alarm</button>
+    </div>
+  </div>
+
+  <!-- TIMER DONE MODAL -->
+  <div id="timer-modal" class="a-modal" aria-hidden="true" role="alertdialog">
+    <div class="a-modal-card liquid-glass-strong">
+      <button onclick="stopTimerRing()" class="mob-close" aria-label="Close"
+        style="position: absolute; top: 15px; right: 15px; background: transparent; border: none; color: var(--text-muted); font-size: 1.5rem; cursor: pointer;">✕</button>
+      <div class="a-ring-icon">⏱</div>
+      <h2>Time's up!</h2>
+      <p id="t-modal-lbl" class="modal-time">Timer</p>
+
+      <div class="ring-settings" style="margin: 1.5rem 0; text-align: left;">
+        <div class="sound-row" style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+          <select id="modal-t-sound" class="fi liquid-glass" style="flex: 1;" onchange="changeRingSound(this.value)">
+            <option value="assets/sound/mixkit-alarm-tone-996.wav">Alarm Tone</option>
+            <option value="assets/sound/mixkit-alert-alarm-1005.wav">Alert Alarm</option>
+            <option value="assets/sound/mixkit-classic-alarm-995.wav">Classic Alarm</option>
+            <option value="assets/sound/mixkit-digital-clock-digital-alarm-buzzer-992.wav">Digital Buzzer</option>
+            <option value="assets/sound/mixkit-facility-alarm-sound-999.wav">Facility Alarm</option>
+            <option value="assets/sound/mixkit-rooster-crowing-in-the-morning-2462.wav">Rooster Crow</option>
+            <option value="assets/sound/mixkit-slot-machine-payout-alarm-1996.wav">Slot Machine Alarm</option>
+            <option value="assets/sound/mixkit-street-public-alarm-997.wav">Street Alarm</option>
+          </select>
+          <button id="modal-t-mute" class="btn-ghost liquid-glass" style="padding: 0 0.8rem;"
+            onclick="toggleRingMute()">🔊</button>
+        </div>
+        <input type="range" id="modal-t-vol" min="0" max="1" step="0.05" value="1.0" class="vol-slider"
+          style="width: 100%;" oninput="changeRingVol(this.value)">
+      </div>
+
+      <button id="t-modal-close" class="btn-primary liquid-glass-strong full-w" onclick="stopTimerRing()">Done</button>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast-wrap" class="toast-wrap" aria-live="polite"></div>
+
+  <footer class="app-footer">
+    <div class="footer-inner liquid-glass">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+          </svg>
+          Clockivo
+        </div>
+        <div class="foot-links">
+          <a href="#about">About</a>
+          <a href="#faq">FAQ</a>
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms</a>
+          <a href="https://www.newaihubber.com/about" target="_blank" rel="noopener noreferrer">Contact Us</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <p class="foot-note">Runs fully in your browser · No data leaves your device</p>
+        <p class="foot-copy">&copy; <span id="yr"></span> All rights reserved. Created by <a
+            href="https://www.newaihubber.com/" target="_blank" rel="noopener noreferrer">Hubber Web</a>.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
